@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="width:100%;">
+                <tr>
+                    <td valign="top" style="border:double;width:20%;">
+                        <asp:TreeView runat="server" ID="TreeView1">
+                            <Nodes>
+                                <asp:TreeNode Text="Page 1" NavigateUrl="~/Page1.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="Page 2" NavigateUrl="~/Page2.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="Page 3" NavigateUrl="~/Page3.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="Page 4" NavigateUrl="~/Page4.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="Page 5" NavigateUrl="~/Page5.aspx"></asp:TreeNode>
+                                <asp:TreeNode Text="Page" NavigateUrl="~/Page.aspx"></asp:TreeNode>
+                            </Nodes>
+                        </asp:TreeView>
+                    </td>
+                    <td style="border:double;width:80%;" align="center">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </form>
+</body>
+</html>
